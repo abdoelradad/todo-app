@@ -1,13 +1,229 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --main-color: #6c63ff;
+  --white-color: #f7f7f7;
+  --black-color: #252525;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  transition: all 0.3s;
+}
+
+.app.light {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+.app.dark {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+.container {
+  position: relative;
+  width: 850px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.heading {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.header {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  font-size: 1rem;
+  background-color: transparent;
+}
+
+.header input {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid var(--main-color);
+
+  border-radius: 5px;
+}
+
+.header input.dark {
+  color: var(--white-color);
+}
+
+.header input:focus {
+  border: 1px solid var(--main-color);
+  outline: var(--main-color);
+}
+
+.header select {
+  width: 10%;
+  border-radius: 5px;
+  background-color: var(--main-color);
+  color: var(--white-color);
+  padding: 0 5px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.header select option {
+  background-color: var(--white-color);
+  color: var(--main-color);
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+button {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  border: 1px solid var(--main-color);
+  background-color: var(--main-color);
+  color: var(--white-color);
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.list {
+  width: 550px;
+  margin: 0 auto;
+  list-style: none;
+  margin-top: 15px;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--main-color);
+}
+
+.item h3 {
+  font-size: 1rem;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.menu {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
+  gap: 5px;
+}
+
+.menu button {
+  padding: 5px;
+  color: #777;
+  width: fit-content;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu button:hover {
+  background-color: 1px solid #777;
+}
+
+.add-btn {
+  position: fixed;
+  bottom: 3rem;
+  right: 19rem;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #25252554;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 300px;
+  padding: 10px;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.modal input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--black-color);
+  border: 1px solid var(--main-color);
+  outline: none;
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn-group button {
+  font-size: 1rem;
+  padding: 10px 15px;
+}
+
+.btn-group button.close {
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+}
+.btn-group button.close:hover {
+  background-color: var(--main-color);
+  color: var(--white-color);
 }
