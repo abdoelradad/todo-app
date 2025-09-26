@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/abdoelradad.github.io/todo-app/static/css/main.06f47d29.css",
+    "main.js": "/abdoelradad.github.io/todo-app/static/js/main.a11a6c82.js",
+    "index.html": "/abdoelradad.github.io/todo-app/index.html",
+    "main.06f47d29.css.map": "/abdoelradad.github.io/todo-app/static/css/main.06f47d29.css.map",
+    "main.a11a6c82.js.map": "/abdoelradad.github.io/todo-app/static/js/main.a11a6c82.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.06f47d29.css",
+    "static/js/main.a11a6c82.js"
+  ]
+}
